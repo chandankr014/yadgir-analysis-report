@@ -13,7 +13,7 @@
     }
 
     .container {
-        max-width: 800px;
+        max-width: 1100px;
         margin: 20px auto;
         padding: 20px;
         background-color: #fff;
@@ -35,6 +35,10 @@
         color: #555;
     }
 
+    li {
+        margin-bottom: 10px;
+    }
+
     </style>
 </head>
 <body>
@@ -45,5 +49,42 @@
             <p>Jal Jeevan Mission (JJM) guidelines state that every rural household must have access to equitable (55 lpcd) and potable drinking water (IS 10500:2012) by 2024. Implementing effective monitoring and surveillance systems is crucial to identifying and addressing water quality issues. This article outlines a framework for drinking water quality monitoring and surveillance in rural households at the village level for efficient implementation and achieving the goals of JJM.</p>
         </div>
     </div>
+    <div class="container">
+        <p>
+            LPCD of 55 is necessary for the villages under JJM to be eligible for certification. <br>
+            Here is the analysis of LPCD Distribution for each block in the ranges. <br>
+            I have taken four ranges: (0-20)&nbsp;&nbsp;&nbsp;&nbsp;(20-40)&nbsp;&nbsp;&nbsp;&nbsp;(40-55)&nbsp;&nbsp;&nbsp;&nbsp;(55+) <br>
+        </p>
+    </div>
+    
+    <div class="container">
+        <h2>Analysis:</h2>
+        <ul>
+            <li>
+            <span style="font-weight: bold;">Majority of blocks</span> have achieved decent LPCD values, with most in the range of 40-55 LPCD. However, some additional effort is required to reach the 55+ LPCD benchmark across all villages.  
+            </li>
+        
+            <li>  
+                <span style="font-weight: bold;">Shorapur block</span> has performed exceptionally well by covering over 55+ LPCD in a significant number of villages. This success can serve as a model for other blocks.
+            </li>
+        
+            <li>
+            <span style="color: #d9534f;">Yadgir block</span> is concerning, with 0 villages reaching 55+ LPCD supply. Focused initiatives likely needed to improve coverage in this block. 
+            </li>
+            
+            <li>
+            With some targeted efforts, most blocks can attain 55+ LPCD supply. Monitoring village-level data also allows identifying and assisting villages with the greatest need.
+            </li>
+        </ul>
+    </div>
+    
+    <div class="container">
+        <h2>Grouped Bar Chart:</h2>
+        <iframe src="plots/grouped_bar_chart_with_values.html" width="100%" height="500px"></iframe>
+        <h2>Spatial Analysis:</h2>
+        <p>Spatial Analysis of LPCD at Village level.</p>
+        <iframe src="maps/index_yadgir_lpcd.html" width="100%" height="500px"></iframe>
+    </div>
+
 </body>
 </html>

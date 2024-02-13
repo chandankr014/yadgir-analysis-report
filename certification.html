@@ -12,7 +12,7 @@
             background-color: #f5f5f5;
         }
         .container {
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 20px auto;
             padding: 20px;
             background-color: #fff;
@@ -37,9 +37,9 @@
         text-align: center;
         }
 
-        ul {
+        ol {
         list-style-type: disc; /* Change bullet style */
-        margin-left: 20px; /* Add margin to the left */
+        margin-top: 10px; /* Add margin to the left */
         }
 
         li {
@@ -68,6 +68,7 @@
             margin: 10px auto;
             /* padding: 10px; */
             background-color: #ffffff;
+            /* justify-items: center; */
         }
         .analysis {
             align-items: center;
@@ -94,57 +95,93 @@
         .analysis ul li {
             margin-bottom: 5px;
         }
+        .status {
+        display: flex;
+        flex-direction: column;
+        }
+
+        .status-item {
+        margin-bottom: 5px;
+        background-color: #d9e7f56b;
+        padding-left: 20px;
+        }
+
+        .status-item h2 {
+        margin-bottom: 5px;
+        }
+
+        .status-item p {
+        margin: 0;
+        }
+
+        .certified {
+        background-color: #c3c8ece7;
+        border: 1px solid #d6e9c6;
+        }
+
+        .reported {
+        background-color: #bbefb8d4;
+        border: 1px solid #faebcc;
+        }
+
+        .in-progress {
+        background-color: #edffc4;
+        border: 1px solid #ebccd1;
+        }
     </style>
 </head>
-<body>
+<body>  
     <div class="container">
-        <h1>Analysis of Water Quality, Quantity, Coverage, and Certification</h1>
-        <h2>Click on the links below for the analysis of other significant factors:</h2>
-        <b>
-            <a href="index.html">Go to Homepage</a>
-        </b>
-        
-        <h3>Jal Jeevan Mission (JJM) Village Status Classification:</h3>
-        <p>The JJM has classified villages into three categories based on their level of implementation and access to Functional Household Tap Connection (FHTC).</p>
-        <ul>
-            <li><strong>Certified:</strong> Villages with 100% FHTC coverage.</li>
-            <li><strong>Reported:</strong> Villages making progress but not yet certified.</li>
-            <li><strong>In Progress:</strong> Villages in the early stages of implementation.</li>
-        </ul>
-        
-        <h3>Observation JJM Status:</h3>
-        <p>The observation of JJM status considers three significant factors:</p>
-        <ol>
-            <li><strong>Water Quality:</strong> Assessing safety and purity.</li>
-            <li><strong>Water Quantity:</strong> Availability of an adequate and consistent water supply.</li>
-            <li><strong>Coverage:</strong> Extent of FHTC coverage.</li>
-        </ol>
-        <p>To be declared as "Certified" under observation of JJM status, a village must fulfill all three factors.</p>
+            <h1>Analysis of Water Quality, Quantity, Coverage, and Certification</h1>
+            
+            <h2>Jal Jeevan Mission (JJM) Village Status Classification:</h2>
+            <p>The JJM has classified villages into three categories based on their level of implementation and access to Functional Household Tap Connection (FHTC).</p>
+            
+            <div class="status">
+              <div class="status-item certified">
+                <h3>Certified:</h3>
+                <p>Villages that have 100% FHTC coverage.</p>
+              </div>
+              <div class="status-item reported">
+                <h3>Reported:</h3>
+                <p>Villages that have made some progress towards achieving FHTC coverage but haven't fulfilled all criteria.</p>
+              </div>
+              <div class="status-item in-progress">
+                <h3>Ongoing:</h3>   
+                <p>Villages that have initiated efforts but are still in early stages of implementation.</p>
+              </div>
+            </div>
+            
+            <h2>Observation JJM Status:</h2>
+            <p>The observation of JJM status considers three significant factors:</p>
+            <div class="status">
+                <div class="status-item">
+                  <h3><strong>Water Quality:</strong></h3>
+                  <p>Assessing safety and purity.</p>
+                </div>
+                <div class="status-item">
+                  <h3><strong>Water Quantity:</strong></h3>
+                  <p>Availability of an adequate and consistent water supply.</p>
+                </div>
+                <div class="status-item">
+                  <h3><strong>Coverage:</strong></h3>
+                  <p>Extent of FHTC coverage.</p>
+                </div>
+              </div>
+              
+            <p>To be declared as "Certified" under observation of JJM status, a village must fulfill all three factors.</p>
+          </div>
 
         <div class="container">
-            <div class="image-section">
-                <img src="images/certi.png" alt="Certification Status">
-                <p class="image-description">This image displays the certification status. It indicates whether a particular certification has been achieved or not. It serves as a visual indicator of the certification status, providing information about the completion or verification of a specific process or requirement.</p>
-            </div>
-            <div class="image-section">
-                <img src="images/certi_flag.png" alt="Observation Report">
-                <p class="image-description">This image represents an observation report. It is used to record and document observations made during a specific event, process, or activity. The report may include details about findings, assessments, or analyses, providing valuable insights and information for further review or action.</p>
-            </div>
+            <h2>Har Ghar Jal(HGJ) Status of Villages:</h2>
+            <p class="image-description">This map displays the certification status. It indicates HGJ Sttaus of Villages 
+            <iframe src="maps/index_yadgir_certi.html"  width="100%" height="500px"></iframe>
+            
+            <h2>Observation of Certified Villages:</h2>
+            <p class="image-description">This map represents an observation report. It signifies where a issued certification is valid or not.
+            <iframe src="maps/index_yadgir_certi_q.html"  width="100%" height="500px"></iframe>
         </div>
-        <div class="analysis2">
-            <table>
-                <tr>
-                    <td style="width: 40px; height: 25px; background-color: rgb(47, 47, 215);"></td>
-                    <td>Certified &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                    
-                    <td style="width: 40px; height: 25px; background-color: rgb(17, 151, 17);"></td>
-                    <td>Reported  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                
-                    <td style="width: 40px; height: 25px; background-color: rgb(188, 235, 21);"></td>
-                    <td>Ongoing</td>
-                </tr> 
-            </table>
-        </div>
+        
         <div class="analysis">
             <h2>Analysis:</h2>
             <ul>
