@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+</head>
+    <style>
+        p {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.5; 
+        max-width: 600px; 
+        margin: 20px auto;
+        padding: 10px 15px;
+        border: 1px solid #ddd;  
+        }  
+    </style>
+<body>
+<canvas id="myPieChart" width="800" height="400"></canvas>
+
+<script>
+// Pie chart data  
+var data = {
+  labels: ["RDW&SD Water Quality Testing Lab Yadgir", "RDW&SD Water Quality Testing Lab Shorapur"],
+  datasets: [
+    {
+      data: [3272, 2724],
+      backgroundColor: ["#3e95cd", "#8e5ea2"]
+    }
+  ]
+};
+
+// Options
+var options = {
+  title: {
+    display: true,
+    text: 'Water Quality Testing Lab Samples'
+  },
+  scales: {
+    yAxes: [{
+      ticks: {
+        min: 0,
+        max: 4000, 
+        stepSize: 1000
+      }
+    }],
+  }  
+};
+
+// Draw pie chart
+var ctx = document.getElementById('myPieChart').getContext('2d');
+var myPieChart = new Chart(ctx, {
+  type: 'pie',
+  data: data,
+  options: options
+}); 
+
+// Threshold line
+var linePlugin = {
+  afterDraw: chart => {
+    var ctx = chart.chart.ctx; 
+    var xAxis = chart.scales['y-axis-0'];
+    var y = xAxis.getPixelForValue(3000);
+
+    ctx.save();
+    ctx.strokeStyle = '#ff0000';
+    ctx.beginPath();
+    ctx.moveTo(0, y);
+    ctx.lineTo(chart.width, y);
+    ctx.stroke();        
+    ctx.restore();
+  }
+}
+
+myPieChart.options.plugins.push(linePlugin);
+</script>
+</body>
+</html>

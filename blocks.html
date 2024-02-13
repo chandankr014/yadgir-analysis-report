@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockwise Analysis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        #parameter-plots {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .parameter-section {
+            margin-bottom: 40px;
+            border: 2px solid #ccc;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .parameter-text {
+            margin-bottom: 20px;
+            border: 1px solid #c9ba14;
+            margin: auto;
+        }
+        h2 {
+            color: #333;
+        }
+        p {
+            color: #666;
+            font-size: 18px;
+            line-height: 1.6;  
+        }
+        iframe {
+            display: block;
+            margin-top: 20px;
+            border: 2px;
+        }
+        .parameter-text {
+        background-color: #f8f8f8;
+        padding: 60px 0;
+        }
+
+        .container {
+        max-width: 800px;
+        margin: 0 auto;  
+        text-align: center;
+        }
+
+        .title-wrap {
+        background: #003552;
+        color: #fff;
+        display: inline-block;  
+        padding: 5px 10px;
+        border-radius: 4px;
+        }
+
+        .color-text {
+        color: #e67e22;
+        }
+
+        /* Style Dropdown */
+        #graph-select {
+        padding: 10px; 
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        }
+
+        /* Style Container */
+        #graph-container {
+        margin-top: 20px;
+        border: 1px solid #000;
+        padding: 10px;
+        background: #f5f5f5;
+        height: 500px;
+        }
+
+        /* Iframe Graph Styles */  
+        #graph-container iframe {
+        display: block;
+        width: 100%;
+        height: 100%;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="parameter-text">
+        <div class="container">
+      
+          <h2>
+            <span class="title-wrap">
+              Blockwise Mapping of Parameters for <span class="color-text">Yadgir</span> District
+            </span>
+          </h2>
+      
+          <p>This is the blockwise mapping of each parameter for Yadgir district. The analysis covers 16 parameters. Please note that some parameters might not be available due to a lack of samples tested and collected for them.</p>
+      
+          <p>The median has been used as a metric to plot the graphs by integrating multiple samples from multiple sources in a village.</p>
+      
+        </div>
+    </div>
+    <!-- Dropdown menu -->
+    <select id="graph-select">
+        <option value="plots/plot_0.html">Free residual Chlorine (mg/l)</option>
+        <option value="plots/plot_1.html">Total Alkalinity (as Calcium Carbonate) (mg/l)</option>
+        <option value="plots/plot_2.html">Turbidity (NTU)</option>
+        <option value="plots/plot_3.html">TDS (mg/l)</option>
+        <option value="plots/plot_4.html">Magnesium (As Mg) (mg/l)</option>
+        <option value="plots/plot_5.html">Fluoride (as F) (mg/l)</option>
+        <option value="plots/plot_6.html">Colour (Hazen units)</option>
+        <option value="plots/plot_7.html">Total Hardness (As CaCO3) (mg/l)</option>
+        <option value="plots/plot_8.html">Sulphate (as SO4) (mg/l)</option>
+        <option value="plots/plot_9.html">Total coliform (CFU/ 100 ml)</option>
+        <option value="plots/plot_10.html">Iron (As Fe) (mg/l)</option>
+        <option value="plots/plot_11.html">Calcium (as Ca) (mg/l)</option>
+        <option value="plots/plot_12.html">Chloride (as Cl) (mg/l)</option>
+        <option value="plots/plot_13.html">Nitrate (as NO3) (mg/l)</option>
+        <option value="plots/plot_14.html">Conductivity (micromhos per centimeter / microsiemens per centimeter)</option>
+        <option value="plots/plot_15.html">pH (NA)</option>
+      </select>
+      
+      <div id="graph-container"></div>
+      
+      <script>
+      const select = document.getElementById("graph-select");
+      const container = document.getElementById("graph-container");
+      
+      select.addEventListener("change", function() {
+        const graph = this.value;
+        container.innerHTML = `<iframe src="${graph}" width="100%" height="500"></iframe>`;
+      });
+      </script>
+    </div>
+</body>
+</html>

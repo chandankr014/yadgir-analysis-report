@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+    .analysis {
+        font-family: Arial; 
+        padding: 10px;
+        border: 1px solid #ddd;
+        width: 100%;  
+        background-color: rgba(182, 238, 243, 0.804);
+    }
+    
+    .container {
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .analysis h2 {
+        text-align: center;
+    }
+    
+    .analysis ul {
+    list-style-position: inside;
+    padding-left: 30px;
+    }
+
+    .point {
+    padding: 10px;
+    margin: 20px 0;
+    border-left: 5px solid #0074d9;  
+    } 
+    .analysis li {
+    position: relative;
+    padding-left: 20px; 
+    margin-bottom: 10px;
+    }
+    
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <h2>Water Quality Lab Analysis</h2>
+  
+  <div class="point">
+    <p>According to JJM Guidelines, each lab is required to test at least 3000 samples per financial year</p>  
+  </div>
+
+  <div class="point">
+    <p><i>RDW&SD Water Quality Testing Lab Yadgir</i> is a District Lab, and its performing good as it has surpassed 3000 sample test threshold value</p>
+    <p><i>RDW&SD Water Quality Testing Lab Shorapur</i> is a Block Lab, and it has a little bit decreased performance</p>
+  </div>
+
+    <!-- Pie Chart iframe -->
+    <div class="chart">
+        <img src="maps/newplot.png" width="100%" height="400px">
+    </div>
+    <div class="analysis">
+
+        <div class="point">
+            <h3>Water Testing Analysis:</h3>
+        </div>
+      
+          <ul>
+            <li>
+              A total of <b>5996</b> water samples were tested in Yadgir District across two labs.  
+            </li>
+            <li>
+                RDW&SD stands for RURAL DRINKING WATER AND SANITATION DEPARTMENT
+            </li>
+            <li> 
+              The RDW&SD Water Quality Testing Lab Yadgir tested the majority of the samples at <b>3272</b>. The Shorapur lab tested the remaining <b>2724</b> samples.
+            </li>
+            <li>
+              This indicates the district-level Yadgir lab has greater testing capacity than the smaller block-level Shorapur lab.  
+            </li>
+            <li>
+              However, some villages located closer to the one lab were sending samples to farther labs.
+              A cost analysis is recommended to understand why villages are bypassing their nearest lab. 
+            </li>
+            <li>
+              Optimizing sample flows to the lowest cost labs could increase savings in the testing budget.          
+            </li>
+          </ul>
+        
+        <p>
+          Additional data on quarterly and village-level figures could reveal more trends to inform decisions. Expanding budget for labs needing equipment upgrades may also help improve capabilities.    
+        </p>
+      
+      </div>
+
+    <!-- Map iframe -->
+    <h2>Observation map for Water Quality Labs</h2>
+    <div class="map">
+        <iframe src="maps/index_yadgir_lab.html" width="100%" height="600px">
+    </div>
+
+
+</div>
+
+</body>
+</html>
