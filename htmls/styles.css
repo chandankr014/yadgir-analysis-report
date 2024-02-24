@@ -1,0 +1,17 @@
+/* styles.css */
+.dataframe {
+border-collapse: collapse;
+width: 95%;
+/* height: 80%; */
+}
+
+.dataframe th,
+.dataframe td {
+border: 1px solid #7dbdd8;
+padding: 8px;
+text-align: center;
+}
+
+.dataframe th {
+background-color: #beebd7;
+}

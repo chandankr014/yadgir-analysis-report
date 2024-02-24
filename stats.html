@@ -40,15 +40,7 @@
             margin-top: 20px;
             border: 2px;
         }
-        /* .parameter-text {
-        padding: 60px 0;
-        } */
-
-        /* .container {
-        max-width: 800px;
-        margin: 0 auto;  
-        text-align: center;
-        } */
+        
         .container {
         max-width: 1100px;
         margin: 20px auto;
@@ -57,14 +49,6 @@
         border-radius: 8px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-
-        /* .title-wrap {
-        background: #003552;
-        color: #fff;
-        display: inline-block;  
-        padding: 5px 10px;
-        border-radius: 4px;
-        } */
 
         .color-text {
         color: #e67e22;
@@ -94,6 +78,8 @@
         height: 100%;
         }
 
+
+
     </style>
 
 </head>
@@ -103,38 +89,33 @@
       
           <h2>
             <span class="title-wrap">
-              Blockwise Mapping of Parameters for <span class="color-text">Yadgir</span> District
+              Statistical Summary of all parameter for each block.
             </span>
           </h2>
-      
-          <p>This is the blockwise mapping of each parameter for Yadgir district. The analysis covers 16 parameters. Please note that some parameters might not be available due to a lack of samples tested and collected for them.</p>
-      
-          <p>The median has been used as a metric to plot the graphs by integrating multiple samples from multiple sources in a village.</p>
-      
-          <p>The distribution is analysed for Pre-Monsoon (April-June) and Post-Monsoon(October-December) for each block.</p>
-        </div>
+       </div>
     </div>
-    <!-- Dropdown menu -->
+
+    <!-- statistical summary -->
     <select id="graph-select">
-        <option value="plots/plot_0.html">Free residual Chlorine (mg/l)</option>
-        <option value="plots/plot_1.html">Total Alkalinity (as Calcium Carbonate) (mg/l)</option>
-        <option value="plots/plot_2.html">Turbidity (NTU)</option>
-        <option value="plots/plot_3.html">TDS (mg/l)</option>
-        <option value="plots/plot_4.html">Magnesium (As Mg) (mg/l)</option>
-        <option value="plots/plot_5.html">Fluoride (as F) (mg/l)</option>
-        <option value="plots/plot_6.html">Colour (Hazen units)</option>
-        <option value="plots/plot_7.html">Total Hardness (As CaCO3) (mg/l)</option>
-        <option value="plots/plot_8.html">Sulphate (as SO4) (mg/l)</option>
-        <option value="plots/plot_9.html">Total coliform (CFU/ 100 ml)</option>
-        <option value="plots/plot_10.html">Iron (As Fe) (mg/l)</option>
-        <option value="plots/plot_11.html">Calcium (as Ca) (mg/l)</option>
-        <option value="plots/plot_12.html">Chloride (as Cl) (mg/l)</option>
-        <option value="plots/plot_13.html">Nitrate (as NO3) (mg/l)</option>
-        <option value="plots/plot_14.html">Conductivity (micromhos per centimeter / microsiemens per centimeter)</option>
-        <option value="plots/plot_15.html">pH (NA)</option>
+        <!-- all -->
+        <option value="htmls/statistical_summary.html">All Parameters</option>
 
-        <!-- statistical summary -->
-
+        <option value="htmls/Free residual Chlorine.html">Free residual Chlorine (mg/l)</option>
+        <option value="htmls/Total Alkalinity.html">Total Alkalinity (as Calcium Carbonate) (mg/l)</option>
+        <option value="htmls/Turbidity.html">Turbidity (NTU)</option>
+        <option value="htmls/TDS.html">TDS (mg/l)</option>
+        <option value="htmls/Magnesium.html">Magnesium (As Mg) (mg/l)</option>
+        <option value="htmls/Fluoride.html">Fluoride (as F) (mg/l)</option>
+        <option value="htmls/Colour.html">Colour (Hazen units)</option>
+        <option value="htmls/Total Hardness.html">Total Hardness (As CaCO3) (mg/l)</option>
+        <option value="htmls/Sulphate.html">Sulphate (as SO4) (mg/l)</option>
+        <option value="htmls/Total coliform.html">Total coliform (CFU/ 100 ml)</option>
+        <option value="htmls/Iron.html">Iron (As Fe) (mg/l)</option>
+        <option value="htmls/Calcium.html">Calcium (as Ca) (mg/l)</option>
+        <option value="htmls/Chloride.html">Chloride (as Cl) (mg/l)</option>
+        <option value="htmls/Nitrate.html">Nitrate (as NO3) (mg/l)</option>
+        <option value="htmls/Conductivity.html">Conductivity (micromhos per centimeter / microsiemens per centimeter)</option>
+        <option value="htmls/pH.html">pH (NA)</option>
 
       </select>
       

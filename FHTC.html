@@ -19,8 +19,15 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+.icontainer {
+        max-width: 900px;
+        width: 100%;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #ffffff;
+    }
 
-h1,h2 {
+h1,h2,h3 {
     text-align: center;
     color: #333;
 }
@@ -41,15 +48,37 @@ p {
     <p>As per data from the Jal Jeevan Mission and other water-related datasets in India, progress towards achieving 100 percent FHTC coverage is a critical indicator of the effectiveness of water supply interventions and the commitment towards ensuring equitable access to safe drinking water as a fundamental human right.</p>
 </div>
 
-<div class="container">
+<!-- <div class="container">
     <h2>Households Tap Connections provided:</h2>
     <iframe src="plots/fhtc p1.html" width="100%" height="400px"></iframe>
-</div>
+    
+    <p>
+        This shows the distribution of households in FY 2023-24, it includes private connectionsas well.
+    </p>
+</div> -->
+
 
 <div class="container">
     <h2>FHTC ranges measure for each block</h2>
     <iframe src="plots/fhtc r b.html" width="100%" height="400px"></iframe>
+
+    <p>
+        This shows the bar plots at different ranges of FHTC Coverage for each blocks.
+    </p>
+    <h3>
+        Statistical Summary:
+    </h3>
+    <div class="icontainer">
+        <iframe src="htmls/fhtc_stats.html" width="100%" height="350px"></iframe>
+    </div>
 </div>
+
+<div class="container">
+    <h2>Spatial Analysis:</h2>
+    <p>Spatial Analysis of Functional Households Tap Connection at Village level.</p>
+    <iframe src="maps/index_yadgir_fhtc.html" width="100%" height="500px"></iframe>
+</div>
+
 
 </body>
 </html>

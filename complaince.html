@@ -80,12 +80,44 @@
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
+    .icontainer {
+        max-width: 1000px;
+        width: 100%;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #ffffff;
+    }
+
     main {
         padding: 20px;
     }
 
     section {
         margin-bottom: 20px;
+    }
+
+    .legend {
+        max-width: 400px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+    }
+    .legend-item {
+        margin-bottom: 10px;
+    }
+    .legend-item span {
+        font-weight: bold;
+    }
+    .jjm-compliant {
+        color: green;
+    }
+    .partially-compliant {
+        color: orange;
+    }
+    .not-compliant {
+        color: red;
     }
 
     </style>
@@ -175,19 +207,83 @@
           </tr>
         </tbody>
       </table>
-      
+
+      <div class="container">
+        <table border="1">
+          <tr>
+            <th>Physical</th>
+            <th>Chemical</th>
+            <th>Bacteriological</th>
+            <th>JJM Complaince</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>-1</td>
+            <td>-1</td>
+            <td>Partially Compliant</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>-1</td>
+            <td>Partially Compliant</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>Not Compliant</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>Compliant</td>
+          </tr>
+          <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>-1</td>
+            <td>Not Compliant</td>
+          </tr>
+          <tr>
+            <td>-1</td>
+            <td>-1</td>
+            <td>1</td>
+            <td>Partially Compliant</td>
+          </tr>
+          <tr>
+            <td>-1</td>
+            <td>-1</td>
+            <td>-1</td>
+            <td>Partially Compliant</td>
+          </tr>
+          <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+            <td>Not Compliant</td>
+          </tr>
+        </table>        
+      </div>
     
         <h2>Important Definitions:</h2>
         <p>The chemical/physical/biological compliance status in the graph is categorized into three groups:</p>
         <ul>
-            <li><strong>Partial Compliant Chemical/Physical/Biological:</strong> Indicates that only a few parameters are within the permissible limit, while the remaining parameters are not measured.</li>
-            <li><strong>Not Compliant Chemical/Physical/Biological:</strong> Samples fail to comply with the JJM guidelines. Even if a single parameter exceeds the permissible limit, the sample is considered not compliant.</li>
-            <li><strong>JJM Compliant Chemical/Physical/Biological:</strong> Represents samples where all parameters have been measured, and their readings fall within the permissible limit. It signifies full compliance with the JJM requirements.</li>
+            <li><h3>Partial Compliant Chemical/Physical/Biological:</h3> Indicates that only a few parameters are within the permissible limit, while the remaining parameters are not measured.</li>
+            <li><h3>Not Compliant Chemical/Physical/Biological:</h3> Samples fail to comply with the JJM guidelines. Even if a single parameter exceeds the permissible limit, the sample is considered not compliant.</li>
+            <li><h3>JJM Compliant Chemical/Physical/Biological:</h3> Represents samples where all parameters have been measured, and their readings fall within the permissible limit. It signifies full compliance with the JJM requirements.</li>
         </ul>
+        <div class="legend">
+          <div class="legend-item jjm-compliant">1 = JJM Compliant</div>
+          <div class="legend-item partially-compliant">-1 = Partially Compliant</div>
+          <div class="legend-item not-compliant">0 = Not Compliant</div>
+      </div>
     </div>
 
     <!-- plots -->
     <div class="container">
+      
         <h2>Physical Compliance</h2>
         <p>Physical compliance ensures that water meets certain visual and sensory criteria, such as clarity, color, and odor.</p>
         <iframe src="plots/physical_comp.html" width="100%" height="500px"></iframe>
@@ -199,6 +295,13 @@
         <h2>Bacteriological Compliance</h2>
         <p>Bacteriological compliance is crucial for assessing the microbiological quality of water.</p>
         <iframe src="plots/bacteriological_comp.html" width="100%" height="500px"></iframe>
+
+        <h2 style="text-align: center; color: #333;">
+          Statistical Summary:
+        </h2>
+        <div class="icontainer">
+          <iframe src="htmls/comp_df_stats (2).html" width="100%" height="625px"></iframe>
+      </div>
 
     </div>
 

@@ -20,8 +20,15 @@
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
+    .icontainer {
+        max-width: 900px;
+        width: 100%;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #ffffff;
+    }
 
-    h1 {
+    h1,h2 {
         text-align: center;
         color: #333;
     }
@@ -58,10 +65,9 @@
         <h1>Per Capita Water Supply in Yadgir District</h1>
         <div class="content">
             <p>Access to safe and clean drinking water is essential for the health and well-being of individuals, communities, and nations. In rural areas of India, however, drinking water quality is often compromised due to various factors such as poor infrastructure, lack of treatment facilities, and contamination from agricultural and industrial activities.</p>
-            <p>Jal Jeevan Mission (JJM) guidelines state that every rural household must have access to equitable (55 lpcd) and potable drinking water (IS 10500:2012) by 2024. Implementing effective monitoring and surveillance systems is crucial to identifying and addressing water quality issues. This article outlines a framework for drinking water quality monitoring and surveillance in rural households at the village level for efficient implementation and achieving the goals of JJM.</p>
+            <p>Jal Jeevan Mission (JJM) guidelines state that every rural household must have access to (55+ lpcd) and potable drinking water <a href="https://jaljeevanmission.gov.in/sites/default/files/guideline/WQMS-Framework.pdf">(IS 10500:2012)</a> by 2024. Implementing effective monitoring and surveillance systems is crucial to identifying and addressing water quality issues. This article outlines a framework for drinking water quality monitoring and surveillance in rural households at the village level for efficient implementation and achieving the goals of JJM.</p>
         </div>
-    </div>
-    <div class="container">
+    
         <p>
             LPCD of 55 is necessary for the villages under JJM to be eligible for certification. <br>
             Here is the analysis of LPCD Distribution for each block in the ranges. <br>
@@ -69,19 +75,33 @@
         </p>
     </div>
     
-    <div class="container plot-container">
+    <!-- <div class="container plot-container">
         <div class="plot-box">
             <iframe src="plots/blockwise_lpcd ws.html" width="100%" height="400"></iframe>
         </div>
         <div class="plot-box">
             <iframe src="plots/blockwise_lpcd pop.html" width="100%" height="400"></iframe>
         </div>
+    </div> -->
+
+    
+    <div class="container" padding="50px">
+        <h2>Blocks Grouped Bar Chart:</h2>
+        <iframe src="plots/grouped_bar_chart_with_values.html" width="100%" height="400px"></iframe>
+        
     </div>
 
     <div class="container">
-        <h2>Blockwise LPCD (aggregated)</h2>
+        <h2>Weighted Average LPCD</h2>
         <iframe src="plots/blockwise_lpcd 1.html" width="100%" height="300"></iframe>
+    
+        <h2>Statistical Summary</h2>
+        <div class="icontainer">
+            <iframe src="htmls/lpcd_stats.html" width="100%" height="350px"></iframe>
+        </div>
+        
     </div>
+    
 
     <div class="container">
         <h2>Analysis:</h2>
@@ -98,19 +118,18 @@
             <span style="color: #d9534f;">Yadgir block</span> is concerning, with 0 villages reaching 55+ LPCD supply. Focused initiatives likely needed to improve coverage in this block. 
             </li>
             
-            <li>
+            <!-- <li>
             With some targeted efforts, most blocks can attain 55+ LPCD supply. Monitoring village-level data also allows identifying and assisting villages with the greatest need.
-            </li>
+            </li> -->
         </ul>
     </div>
     
     <div class="container">
-        <h2>Grouped Bar Chart:</h2>
-        <iframe src="plots/grouped_bar_chart_with_values.html" width="100%" height="500px"></iframe>
         <h2>Spatial Analysis:</h2>
         <p>Spatial Analysis of LPCD at Village level.</p>
         <iframe src="maps/index_yadgir_lpcd.html" width="100%" height="500px"></iframe>
     </div>
+    
 
 </body>
 </html>
