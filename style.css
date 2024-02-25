@@ -84,3 +84,29 @@ padding: 20px;
 .links-panel a:hover {
     text-decoration: underline; 
 }
+
+/* footer styling */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding : 10px 50px 10px 50px;
+}
+
+.footer-left img,
+.footer-right img {
+    width: 150px; 
+    height: 150px;
+}
+
+.footer-text {
+    text-align: center;
+    font-size: 20px;
+    color: #333;
+}
+
+.footer-text p {
+    margin: 10px 0;
+}
+
